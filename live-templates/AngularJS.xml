@@ -1,0 +1,106 @@
+<templateSet group="AngularJS">
+  <template name="ngapp" value="/**&#10; * $moduleName$&#10; * @namespace $moduleName$&#10; */&#10;(function() {&#10;  angular&#10;    .module('$moduleName$', [&#10;      '$dependency$'$END$&#10;    ]);&#10;})()&#10;$END$" description="Creates an Angular module setter" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;moduleName&quot;" alwaysStopAt="true" />
+    <variable name="dependency" expression="" defaultValue="&quot;dependency&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngconfig" value=".config($config$);&#10;&#10;$config$.$inject = ['$dependency$'];&#10;&#10;function $config$($dependency$) {&#10;  $configFunction$;&#10;}$END$" description="Defines a configuration phase function" toReformat="false" toShortenFQNames="true">
+    <variable name="config" expression="" defaultValue="&quot;config&quot;" alwaysStopAt="true" />
+    <variable name="dependency" expression="" defaultValue="&quot;dependency&quot;" alwaysStopAt="true" />
+    <variable name="configFunction" expression="" defaultValue="&quot;code&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngcontroller" value="/**&#10; * $ControllerName$&#10; * @namespace $moduleName$.Controllers&#10; */&#10;(function() {&#10;  angular&#10;    .module('$moduleName$')&#10;    .controller('$ControllerName$', $ControllerName$);&#10;&#10;  $ControllerName$.$inject = ['$dependency$'];&#10;  &#10;  /**&#10;   * @namespace $ControllerName$&#10;   * @desc ViewModel for $templateName$.view.html&#10;   * @memberOf $moduleName$.Controllers&#10;   */&#10;  function $ControllerName$($dependency$) {&#10;    var vm = this;&#10;    vm.title = '$ControllerName$';&#10;    vm.$functionName$ = $functionName$;&#10;    /**&#10;     * @name $functionName$&#10;     * @desc description&#10;     * @param {String} $paramName$ description&#10;     * @returns {Array[object]} $returnValName$ description&#10;     * @memberOf $moduleName$.Controllers.$ControllerName$&#10;     */&#10;    function $functionName$ ($paramName$) {&#10;      return $paramName$;&#10;    }&#10;  }&#10;})();&#10;$END$" description="Creates an Angular controller" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;moduleName&quot;" alwaysStopAt="true" />
+    <variable name="ControllerName" expression="" defaultValue="&quot;ControllerName&quot;" alwaysStopAt="true" />
+    <variable name="dependency" expression="" defaultValue="&quot;dependency&quot;" alwaysStopAt="true" />
+    <variable name="templateName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="functionName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="paramName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="returnValName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngdirective" value="/**&#10; * $directiveName$&#10; * @namespace $moduleName$.Directives&#10; */&#10;(function() {&#10;  angular&#10;    .module('$moduleName$')&#10;    .directive('$directiveName$', $directiveName$);&#10;&#10;  $directiveName$.$inject = ['$dependency$'];&#10;&#10;  /**&#10;   * @namespace $directiveName$&#10;   * @desc description&#10;   * @memberOf $moduleName$.Directives&#10;   */&#10;  function $directiveName$($dependency$) {&#10;    var directive = {&#10;      bindToController: true,&#10;      controller: $ControllerName$,&#10;      controllerAs: 'vm',&#10;      link: link,&#10;      restrict: 'A',&#10;      scope: {}&#10;    };&#10;    return directive;&#10;&#10;    function link(scope, element, attrs) {&#10;      $linkFunction$;&#10;    }&#10;  }&#10;&#10;  $ControllerName$.$inject = ['$dependency$'];&#10;  &#10;  /**&#10;   * @namespace $ControllerName$&#10;   * @desc description&#10;   * @memberOf $moduleName$.Directives.$directiveName$&#10;   */&#10;  function $ControllerName$($dependency$) {&#10;    var vm = this;&#10;    vm.$functionName$ = $functionName$;&#10;    /**&#10;     * @name $functionName$&#10;     * @desc description&#10;     * @param {String} $paramName$ description&#10;     * @returns {Array[object]} $returnValName$ description&#10;     * @memberOf $moduleName$.Directives.$directiveName$.$ControllerName$&#10;     */&#10;    function $functionName$($paramName$) {&#10;      return $paramName$;&#10;    }&#10;  }&#10;})();&#10;$END$" description="Creates an Angular directive" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;moduleName&quot;" alwaysStopAt="true" />
+    <variable name="directiveName" expression="" defaultValue="&quot;directiveName&quot;" alwaysStopAt="true" />
+    <variable name="dependency" expression="" defaultValue="&quot;dependency&quot;" alwaysStopAt="true" />
+    <variable name="ControllerName" expression="" defaultValue="&quot;ControllerName&quot;" alwaysStopAt="true" />
+    <variable name="linkFunction" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="functionName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="paramName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="returnValName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngfactory" value="/**&#10; * $factoryName$&#10; * @namespace $moduleName$.Factories&#10; */&#10;(function() {&#10;  angular&#10;    .module('$moduleName$')&#10;    .factory('$factoryName$', $factoryName$);&#10;&#10;  $factoryName$.$inject = ['$dependency$'];&#10;&#10;  /**&#10;   * @namespace $factoryName$&#10;   * @desc description&#10;   * @memberOf $moduleName$.Factories&#10;   */&#10;  function $factoryName$($dependency$) {&#10;    var service = {&#10;      $functionName$: $functionName$&#10;    };&#10;    return service;&#10;&#10;    /**&#10;     * @name $functionName$&#10;     * @desc description&#10;     * @param {String} $paramName$ description&#10;     * @returns {Array[object]} $returnValName$ description&#10;     * @memberOf $moduleName$.Factories.$factoryName$&#10;     */&#10;    function $functionName$($paramName$) {&#10;      return $paramName$;&#10;    }&#10;  }&#10;})();&#10;$END$" description="Creates an Angular factory" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;moduleName&quot;" alwaysStopAt="true" />
+    <variable name="factoryName" expression="" defaultValue="&quot;factoryName&quot;" alwaysStopAt="true" />
+    <variable name="dependency" expression="" defaultValue="&quot;dependency&quot;" alwaysStopAt="true" />
+    <variable name="functionName" expression="" defaultValue="&quot;functionName&quot;" alwaysStopAt="true" />
+    <variable name="paramName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="returnValName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngfilter" value="/**&#10; * $filterName$&#10; * @namespace $moduleName$.Filters&#10; */&#10;(function() {&#10;  angular&#10;    .module('$moduleName$')&#10;    .filter('$filterName$', $filterName$);&#10;&#10;  /**&#10;   * @namespace $filterName$&#10;   * @memberOf $moduleName$.Filters&#10;   */&#10;  function $filterName$() {&#10;    return $filterName$Filter;&#10;&#10;    /**&#10;     * @name $filterName$Filter&#10;     * @desc description&#10;     * @param {String} $paramName$ description&#10;     * @returns {Array[object]} $returnValName$ description&#10;     * @memberOf $moduleName$.Filters.$filterName$&#10;     */&#10;    function $filterName$Filter($paramName$) {&#10;      return $paramName$;&#10;    }&#10;  }&#10;})();&#10;$END$" description="Creates an Angular filter" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;moduleName&quot;" alwaysStopAt="true" />
+    <variable name="filterName" expression="" defaultValue="&quot;filterName&quot;" alwaysStopAt="true" />
+    <variable name="paramName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="returnValName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngmodule" value="angular&#10;  .module('$moduleName$')&#10;  $END$;" description="Creates an Angular module getter" toReformat="false" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;module&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngroute" value=".when('/$url$', {&#10;  templateUrl: '$template$.html',&#10;  controller: '$ControllerName$',&#10;  controllerAs: '$vm$'&#10;})$END$" description="Defines an Angular ngRoute 'when' definition" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="&quot;url&quot;" alwaysStopAt="true" />
+    <variable name="template" expression="" defaultValue="&quot;template&quot;" alwaysStopAt="true" />
+    <variable name="ControllerName" expression="" defaultValue="&quot;ControllerName&quot;" alwaysStopAt="true" />
+    <variable name="vm" expression="" defaultValue="&quot;vm&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngrun" value=".run(run$runName$)&#10;&#10;run$runName$.$inject = ['$dependency$'];&#10;&#10;function run$runName$ ($dependency$) {&#10;  $runNameFunction$&#10;}$END$" description="Defines a run phase function" toReformat="false" toShortenFQNames="true">
+    <variable name="runName" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="dependency" expression="" defaultValue="&quot;dependency&quot;" alwaysStopAt="true" />
+    <variable name="runNameFunction" expression="" defaultValue="&quot;code&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngservice" value="/**&#10; * $serviceName$&#10; * @namespace $moduleName$.Services&#10; */&#10;(function() {&#10;  angular&#10;    .module('$moduleName$')&#10;    .factory('$serviceName$', $serviceName$);&#10;&#10;  $serviceName$.$inject = ['$dependency$'];&#10;&#10;  /**&#10;   * @namespace $serviceName$&#10;   * @desc description&#10;   * @memberOf $moduleName$.Services&#10;   */&#10;  function $serviceName$($dependency$) {&#10;    this.$functionName$ = $functionName$;&#10;&#10;    /**&#10;     * @name $functionName$&#10;     * @desc description&#10;     * @param {String} $paramName$ description&#10;     * @returns {Array[object]} $returnValName$ description&#10;     * @memberOf $moduleName$.Services.$serviceName$&#10;     */&#10;    function $functionName$($paramName$) {&#10;      return $paramName$;&#10;    }&#10;  }&#10;})();&#10;$END$" description="Creates an Angular service" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;moduleName&quot;" alwaysStopAt="true" />
+    <variable name="serviceName" expression="" defaultValue="&quot;serviceName&quot;" alwaysStopAt="true" />
+    <variable name="dependency" expression="" defaultValue="&quot;dependency&quot;" alwaysStopAt="true" />
+    <variable name="functionName" expression="" defaultValue="&quot;functionName&quot;" alwaysStopAt="true" />
+    <variable name="paramName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="returnValName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ngstate" value=".state('$state$', {&#10;  url: '/$url$',&#10;  templateUrl: '$template$.html',&#10;  controller: '$ControllerName$',&#10;  controllerAs: '$vm$'&#10;})$END$" description="Creates an Angular UI Router state defintion" toReformat="false" toShortenFQNames="true">
+    <variable name="state" expression="" defaultValue="&quot;state&quot;" alwaysStopAt="true" />
+    <variable name="url" expression="" defaultValue="&quot;url&quot;" alwaysStopAt="true" />
+    <variable name="template" expression="" defaultValue="&quot;template&quot;" alwaysStopAt="true" />
+    <variable name="ControllerName" expression="" defaultValue="&quot;ControllerName&quot;" alwaysStopAt="true" />
+    <variable name="vm" expression="" defaultValue="&quot;vm&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>
