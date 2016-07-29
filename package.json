@@ -1,0 +1,35 @@
+{
+  "name": "angular-live-templates",
+  "version": "1.0.0",
+  "description": "These templates practive the Angular Style Guide: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "standard": {
+    "ignore":[
+
+    ],
+    "global": [
+      "angular"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coryellenberger/angular-live-templates.git"
+  },
+  "keywords": [
+    "Live",
+    "Templates",
+    "Angular"
+  ],
+  "author": "Cory Ellenberger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coryellenberger/angular-live-templates/issues"
+  },
+  "homepage": "https://github.com/coryellenberger/angular-live-templates#readme",
+  "devDependencies": {
+    "standard": "^7.1.2"
+  }
+}
