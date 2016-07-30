@@ -1,5 +1,5 @@
-# IntelliJ Live Templates for Angular
-These templates practive the Angular Style Guide: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
+# IntelliJ Live Templates for AngularJS 1.5
+These templates follow the Angular Style Guide: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
 
 Angular Live Templates StandardJS Linting: [Configuration XML to Import](https://raw.githubusercontent.com/coryellenberger/angular-live-templates/master/live-templates/AngularStandard.xml)
 
