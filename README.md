@@ -5,7 +5,7 @@ Angular Live Templates StandardJS Linting: [Configuration XML to Import](https:/
 
 Angular Live Templates: [Configuration XML to Import](https://raw.githubusercontent.com/coryellenberger/angular-live-templates/master/live-templates/AngularJS.xml)
 
-
+Including example Unit Tests
 
 ### JSLinting with StandardJS
 `standard`
