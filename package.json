@@ -4,14 +4,21 @@
   "description": "These templates practive the Angular Style Guide: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md",
   "main": "index.js",
   "scripts": {
-    "test": "standard"
+    "postinstall": "gulp bower",
+    "test": "standard && gulp test"
   },
   "standard": {
     "ignore":[
-
+      "standard-angular-examples/libs/**"
     ],
-    "global": [
-      "angular"
+    "globals": [
+      "angular",
+      "it",
+      "describe",
+      "beforeEach",
+      "inject",
+      "spyOn",
+      "expect"
     ]
   },
   "repository": {
@@ -29,7 +36,16 @@
     "url": "https://github.com/coryellenberger/angular-live-templates/issues"
   },
   "homepage": "https://github.com/coryellenberger/angular-live-templates#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13"
+  },
   "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
     "standard": "^7.1.2"
   }
 }

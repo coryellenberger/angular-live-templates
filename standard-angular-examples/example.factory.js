@@ -7,14 +7,14 @@
     .module('exampleModule')
     .factory('exampleFactory', exampleFactory)
 
-  exampleFactory.$inject = ['exampleService']
+  exampleFactory.$inject = []
 
   /**
    * @namespace exampleFactory
    * @desc description
    * @memberOf exampleModule.Factories
    */
-  function exampleFactory (exampleService) {
+  function exampleFactory () {
     var service = {
       exampleFunction: exampleFunction
     }

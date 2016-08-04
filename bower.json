@@ -1,0 +1,21 @@
+{
+  "name": "angular-live-templates",
+  "description": "",
+  "authors": [
+    "Cory Ellenberger"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/coryellenberger/angular-live-templates",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "standard-angular-examples/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x"
+  }
+}

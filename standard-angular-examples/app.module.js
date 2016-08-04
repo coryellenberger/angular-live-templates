@@ -4,7 +4,5 @@
  */
 (function () {
   angular
-    .module('exampleModule', [
-      'exampleDependencyModule'
-    ])
+    .module('exampleModule', [])
 })()

@@ -5,7 +5,7 @@
 (function () {
   angular
     .module('exampleModule')
-    .filter('exampleFilter', exampleFilter)
+    .filter('example', exampleFilter)
 
   /**
    * @namespace exampleFilter

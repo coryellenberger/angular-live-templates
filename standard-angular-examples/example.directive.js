@@ -16,6 +16,7 @@
    */
   function exampleDirective (exampleFactory) {
     var directive = {
+      template: '<span>exampleDirective</span>',
       bindToController: true,
       controller: DirectiveController,
       controllerAs: 'vm',

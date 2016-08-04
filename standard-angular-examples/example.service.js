@@ -5,16 +5,16 @@
 (function () {
   angular
     .module('exampleModule')
-    .factory('exampleService', exampleService)
+    .service('exampleService', exampleService)
 
-  exampleService.$inject = ['exampleFactory']
+  exampleService.$inject = []
 
   /**
    * @namespace exampleService
    * @desc description
    * @memberOf exampleModule.Services
    */
-  function exampleService (exampleFactory) {
+  function exampleService () {
     this.exampleFunction = exampleFunction
 
     /**
