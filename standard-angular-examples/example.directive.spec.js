@@ -1,4 +1,4 @@
-describe('ExampleDirective', function () {
+describe('exampleDirective', function () {
   beforeEach(module('exampleModule'))
 
   var compile

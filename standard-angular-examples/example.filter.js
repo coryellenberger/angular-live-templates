@@ -1,28 +1,28 @@
 /**
- * exampleFilter
- * @namespace exampleModule.Filters
+ * example
+ * @namespace Filters
  */
 (function () {
   angular
     .module('exampleModule')
-    .filter('example', exampleFilter)
+    .filter('example', example)
 
   /**
-   * @namespace exampleFilter
-   * @memberOf exampleModule.Filters
+   * @namespace example
+   * @memberOf Filters
    */
-  function exampleFilter () {
-    return exampleFilterFilter
+  function example () {
+    return exampleFilter
 
     /**
-     * @name exampleFilterFilter
+     * @name exampleFilter
      * @desc description
-     * @param {String} exampleParam description
-     * @returns {Array[object]} exampleReturn description
-     * @memberOf exampleModule.Filters.exampleFilter
+     * @param {String} exampleparam description
+     * @returns {String} exampleReturn description
+     * @memberOf Filters.example
      */
-    function exampleFilterFilter (exampleParam) {
-      return exampleParam
+    function exampleFilter (exampleparam) {
+      return exampleparam
     }
   }
 })()

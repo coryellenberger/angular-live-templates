@@ -1,6 +1,6 @@
 /**
  * exampleFactory
- * @namespace exampleModule.Factories
+ * @namespace Factories
  */
 (function () {
   angular
@@ -12,7 +12,7 @@
   /**
    * @namespace exampleFactory
    * @desc description
-   * @memberOf exampleModule.Factories
+   * @memberOf Factories
    */
   function exampleFactory () {
     var service = {
@@ -25,7 +25,7 @@
      * @desc description
      * @param {String} exampleParam description
      * @returns {Array[object]} exampleReturn description
-     * @memberOf exampleModule.Factories.exampleFactory
+     * @memberOf Factories.exampleFactory
      */
     function exampleFunction (exampleParam) {
       return exampleParam

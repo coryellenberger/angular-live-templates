@@ -1,4 +1,4 @@
-describe('ExampleService', function () {
+describe('exampleService', function () {
   beforeEach(module('exampleModule'))
 
   var exampleService
@@ -13,3 +13,4 @@ describe('ExampleService', function () {
     expect(exampleService.exampleFunction(value)).toEqual(value)
   })
 })
+

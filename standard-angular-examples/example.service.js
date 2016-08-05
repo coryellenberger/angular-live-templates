@@ -1,28 +1,28 @@
 /**
  * exampleService
- * @namespace exampleModule.Services
+ * @namespace Services
  */
 (function () {
   angular
     .module('exampleModule')
     .service('exampleService', exampleService)
 
-  exampleService.$inject = []
+  exampleService.$inject = ['exampleFactory']
 
   /**
    * @namespace exampleService
    * @desc description
-   * @memberOf exampleModule.Services
+   * @memberOf Services
    */
-  function exampleService () {
+  function exampleService (exampleFactory) {
     this.exampleFunction = exampleFunction
 
     /**
      * @name exampleFunction
      * @desc description
      * @param {String} exampleParam description
-     * @returns {Array[object]} exampleReturn description
-     * @memberOf exampleModule.Services.exampleService
+     * @returns {String} exampleReturn description
+     * @memberOf Services.exampleService
      */
     function exampleFunction (exampleParam) {
       return exampleParam

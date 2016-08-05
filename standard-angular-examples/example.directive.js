@@ -1,24 +1,24 @@
 /**
  * exampleDirective
- * @namespace exampleModule.Directives
+ * @namespace Directives
  */
 (function () {
   angular
     .module('exampleModule')
     .directive('exampleDirective', exampleDirective)
 
-  exampleDirective.$inject = ['exampleFactory']
+  exampleDirective.$inject = []
 
   /**
    * @namespace exampleDirective
    * @desc description
-   * @memberOf exampleModule.Directives
+   * @memberOf Directives
    */
-  function exampleDirective (exampleFactory) {
+  function exampleDirective () {
     var directive = {
       template: '<span>exampleDirective</span>',
       bindToController: true,
-      controller: DirectiveController,
+      controller: exampleDirectiveController,
       controllerAs: 'vm',
       link: link,
       restrict: 'A',
@@ -31,14 +31,14 @@
     }
   }
 
-  DirectiveController.$inject = ['exampleFactory']
+  exampleDirectiveController.$inject = []
 
   /**
-   * @namespace DirectiveController
+   * @namespace exampleDirectiveController
    * @desc description
-   * @memberOf exampleModule.Directives.exampleDirective
+   * @memberOf Directives.exampleDirective
    */
-  function DirectiveController (exampleFactory) {
+  function exampleDirectiveController () {
     var vm = this
     vm.exampleFunction = exampleFunction
     /**
@@ -46,7 +46,7 @@
      * @desc description
      * @param {String} exampleParam description
      * @returns {Array[object]} exampleReturn description
-     * @memberOf exampleModule.Directives.exampleDirective.DirectiveController
+     * @memberOf Directives.exampleDirective.exampleDirectiveController
      */
     function exampleFunction (exampleParam) {
       return exampleParam
