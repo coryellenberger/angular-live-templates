@@ -24,7 +24,7 @@
      * @name exampleFunction
      * @desc description
      * @param {String} exampleParam description
-     * @returns {Array[object]} exampleReturn description
+     * @returns {String} exampleReturn description
      * @memberOf Factories.exampleFactory
      */
     function exampleFunction (exampleParam) {
