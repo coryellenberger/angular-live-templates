@@ -1,15 +1,15 @@
-describe('example', function () {
+describe('exampleFilter', function () {
   beforeEach(module('exampleModule'))
 
-  var exampleFilter
+  var exampleFilterFilter
 
-  beforeEach(inject(function (_exampleFilter_) {
-    exampleFilter = _exampleFilter_
+  beforeEach(inject(function (_exampleFilterFilter_) {
+    exampleFilterFilter = _exampleFilterFilter_
   }))
 
-  it('should have exampleFilter and return param passed', function () {
-    expect(exampleFilter).toBeDefined()
+  it('should have exampleFilterFilter and return param passed', function () {
+    expect(exampleFilterFilter).toBeDefined()
     var value = 'TEST'
-    expect(exampleFilter(value)).toEqual(value)
+    expect(exampleFilterFilter(value)).toEqual(value)
   })
 })
