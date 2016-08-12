@@ -13,4 +13,3 @@ describe('exampleService', function () {
     expect(exampleService.exampleFunction(value)).toEqual(value)
   })
 })
-

@@ -2,16 +2,16 @@ describe('ExampleController', function () {
   beforeEach(module('exampleModule'))
 
   var $controller
-  var exampleFactory
+  var exampleService
 
-  beforeEach(inject(function (_$controller_, _exampleFactory_) {
+  beforeEach(inject(function (_$controller_, _exampleService_) {
     $controller = _$controller_
-    exampleFactory = _exampleFactory_
+    exampleService = _exampleService_
   }))
 
   it('should have exampleFunction and return param passed', function () {
     var controller = $controller('ExampleController', {
-      exampleFactory: exampleFactory
+      exampleService: exampleService
     })
 
     expect(controller.exampleFunction).toBeDefined()

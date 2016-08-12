@@ -1,6 +1,6 @@
 /**
- * exampleService
- * @namespace Services
+ * TODO fill out the description of this controller
+ * @module exampleService
  */
 (function () {
   angular
@@ -10,22 +10,21 @@
   exampleService.$inject = ['exampleFactory']
 
   /**
-   * @namespace exampleService
-   * @desc description
-   * @memberOf Services
+   * @param {object} exampleFactory - TODO fill out the description of this dependency
+   * @constructs exampleService
    */
   function exampleService (exampleFactory) {
     this.exampleFunction = exampleFunction
 
     /**
-     * @name exampleFunction
-     * @desc description
-     * @param {String} exampleParam description
-     * @returns {String} exampleReturn description
-     * @memberOf Services.exampleService
+     * TODO fill out the description of this public function
+     * @param {object} exampleParam - TODO fill out the description of the input param
+     * @returns {object} exampleReturn - TODO fill out the description of this return param
+     * @method exampleFunction
      */
     function exampleFunction (exampleParam) {
-      return exampleParam
+      var exampleReturn = exampleParam
+      return exampleReturn
     }
   }
 })()

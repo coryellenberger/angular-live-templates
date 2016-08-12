@@ -1,24 +1,23 @@
 /**
- * exampleDirective
- * @namespace Directives
+ * TODO fill out the description of this controller
+ * @module exampleDirective
  */
 (function () {
   angular
     .module('exampleModule')
     .directive('exampleDirective', exampleDirective)
 
-  exampleDirective.$inject = []
+  exampleDirective.$inject = ['exampleService']
 
   /**
-   * @namespace exampleDirective
-   * @desc description
-   * @memberOf Directives
+   * @param {object} exampleService - TODO fill out the description of this dependency
+   * @constructs exampleDirective
    */
-  function exampleDirective () {
+  function exampleDirective (exampleService) {
     var directive = {
       template: '<span>exampleDirective</span>',
       bindToController: true,
-      controller: exampleDirectiveController,
+      controller: ExampleDirectiveController,
       controllerAs: 'vm',
       link: link,
       restrict: 'A',
@@ -27,26 +26,25 @@
     return directive
 
     function link (scope, element, attrs) {
-      return scope
+      return 'TEST'
     }
   }
 
-  exampleDirectiveController.$inject = []
+  ExampleDirectiveController.$inject = ['exampleFactory']
 
   /**
-   * @namespace exampleDirectiveController
-   * @desc description
-   * @memberOf Directives.exampleDirective
+   * @param {object} exampleService - TODO fill out the description of this dependency
+   * @constructs ExampleDirectiveController
    */
-  function exampleDirectiveController () {
+  function ExampleDirectiveController (exampleService) {
     var vm = this
     vm.exampleFunction = exampleFunction
+
     /**
-     * @name exampleFunction
-     * @desc description
-     * @param {String} exampleParam description
-     * @returns {String} exampleReturn description
-     * @memberOf Directives.exampleDirective.exampleDirectiveController
+     * TODO fill out the description of this public function
+     * @param {object} exampleParam - TODO fill out the description of the input param
+     * @returns {object} exampleReturn - TODO fill out the description of this return param
+     * @method exampleFunction
      */
     function exampleFunction (exampleParam) {
       return exampleParam

@@ -1,32 +1,31 @@
 /**
- * ExampleController
- * @namespace Controllers
+ * TODO fill out the description of this controller
+ * @module ExampleController
  */
 (function () {
   angular
     .module('exampleModule')
     .controller('ExampleController', ExampleController)
 
-  ExampleController.$inject = ['exampleFactory']
-
+  ExampleController.$inject = ['exampleService']
   /**
-   * @namespace ExampleController
-   * @desc ViewModel for example.view.html
-   * @memberOf Controllers
+   * @param {object} exampleService - TODO fill out the description of this dependency
+   * @constructs ExampleController
    */
-  function ExampleController (exampleFactory) {
+  function ExampleController (exampleService) {
+    /** public members **/
     var vm = this
     vm.title = 'ExampleController'
     vm.exampleFunction = exampleFunction
     /**
-     * @name exampleFunction
-     * @desc description
-     * @param {String} exampleParam description
-     * @returns {String} exampleReturn description
-     * @memberOf Controllers.ExampleController
+     * TODO fill out the description of this public function
+     * @param {object} exampleParam - TODO fill out the description of the input param
+     * @returns {object} exampleReturn - TODO fill out the description of this return param
+     * @method exampleFunction
      */
     function exampleFunction (exampleParam) {
-      return exampleParam
+      var exampleReturn = exampleParam
+      return exampleReturn
     }
   }
 })()
