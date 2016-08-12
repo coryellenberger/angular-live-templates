@@ -9,7 +9,8 @@
   },
   "standard": {
     "ignore":[
-      "standard-angular-examples/libs/**"
+      "standard-angular-examples/libs/**",
+      "angular-examples/**"
     ],
     "globals": [
       "angular",

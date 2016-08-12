@@ -14,10 +14,14 @@ module.exports = function (config) {
       { pattern: 'bower_components/angular/angular.js', watched: false },
       // load angular mock for testing
       { pattern: 'bower_components/angular-mocks/angular-mocks.js', watched: false },
-      // load all non-test resources first
+      // load all standardjs non-test resources first
       { pattern: 'standard-angular-examples/**/!(*spec).js', watched: true },
+      // load all non-test resources first
+      { pattern: 'angular-examples/**/!(*spec).js', watched: true },
+      // then load the standardjs unit tests
+      { pattern: 'standard-angular-examples/**/**.spec.js', watched: true },
       // then load the unit tests
-      { pattern: 'standard-angular-examples/**/**.spec.js', watched: true }
+      { pattern: 'angular-examples/**/**.spec.js', watched: true }
     ],
 
     // list of files to exclude
